@@ -12,9 +12,14 @@ export class CitiController {
     return this.citiService.create(createCitiDto);
   }
 
+
   @Get()
   findAll() {
     return this.citiService.findAll();
+  }
+  @Post("name")
+  createdcity(@Body() createCitiDto: CreateCitiDto) {
+    return this.citiService.createdcity(createCitiDto);
   }
 
   @Get(':id')
